@@ -1,0 +1,113 @@
+
+.bg-home{
+    margin-top: -30px;
+    background-image: url('../../../assets/images/home.jpg'), linear-gradient(#43313d, #614140);
+    /* background-image: url(''); */
+    /* background-image: url('../../../assets/images/home.jpg'), -webkit-linear-gradient(left, rgba(0,47,75,0.5) 80%,rgba(220, 66, 37, 0.5) 10%); */
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.7;
+    font-family: Arial, Helvetica, sans-serif;
+    background-size: cover;
+    height: 400px;
+    color: black;
+    font-weight: 1000;
+
+}
+ h2{
+    font-weight: 800;
+
+ }
+
+.header{
+    padding-top: 90px;
+    padding-bottom: 40px;
+}
+.clickable{
+    padding-left: 190px;
+}
+
+.clickable button{
+    border: none;
+    color: white;
+    background-color: rgb(79, 79, 248);
+    border-radius: 10px;
+    padding: 20px 20px;
+    font-size: 18px;
+}
+
+.clickable button:hover{
+    border: none;
+    color: rgb(245, 242, 242);
+    background-color: rgb(72, 72, 188);
+    border-radius: 10px;
+    padding: 20px 20px;
+    font-size: 18px;
+}
+
+.beneficiary{
+    width: 100%;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.border:hover{
+    background-color: rgb(137, 206, 248);
+    color: white;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    border: none !important;
+}
+
+.border{
+    border: 1.6px solid rgb(223, 222, 222) !important;
+    width:200px;
+    border-radius: 10px;
+}
+
+img{
+    width: 80px;
+    height: 80px;
+}
+
+.check{
+    margin-top: 0px;
+    height: 25px;
+}
+
+.modal-head{
+    color: rgb(241, 156, 30);
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.sendBtn{
+    background: #7D5C44;
+    border: 0.5px solid #EEEEEE;
+    border-radius: 5px;
+    width: 50%;
+    padding:10px;
+    margin-bottom: 30px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #FFFFFF;
+    }
+
+
+    .btnCont{
+        border-radius: 50% !important;
+        border: none;
+        padding: 15px !important;
+    }
+    a:focus{
+        cursor: pointer;
+    }
+
+    .strikeThrough{
+        text-decoration: line-through
+    }

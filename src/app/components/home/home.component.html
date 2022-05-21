@@ -1,0 +1,165 @@
+ <div class="main">
+    <div class="bg-home">
+        <div class="header text-center ">
+          <h2>Make Your Life More Healthy And Safe</h2>
+          <p class=""> We work foe health blah blah blah ............</p>
+        </div>
+        <div class="g-med d-flex justify-content-start px-5">
+          <div class="my-4">
+            <h2 class="">General Medicine</h2>
+            <span class=""> Prevention  |</span>
+            <span class=""> Diagnosis  |</span>
+            <span class=""> Treament  </span>
+          </div>
+          <div class="my-4 clickable">
+            <button class="" (click)="open(mymodal, true)"> Click Here To Diagnose</button>
+          </div>
+        </div>
+    </div>
+    <div class="diseases px-5">
+      <div class=" d-flex justify-content-between py-4 ">
+        <div class="" style="font-weight: 600; font-size: 19px;">
+          Common Sickness
+        </div>
+         
+      </div>
+  
+      <div  [routerLink]="['/malaria']" class=" d-flex justify-content-between py-4">
+        <div class=" border px-5 shadow" >
+          <div class="beneficiary-icon mx-1 py-5 text-center">
+            <img src="../../../assets/icons/malaria.png" alt="maleria icon">
+  
+          </div>
+            <p class="beneficiary py-4 ">Malaria</p> 
+        </div>
+
+        <div [routerLink]="['/typhoid']" class=" border px-5 shadow" >
+          <div class="beneficiary-icon mx-1 py-5 text-center">
+            <img src="../../../assets/icons/typhoid.png" alt="Typhoid icon">
+  
+          </div>
+            <p class="beneficiary py-4">Typhoid</p> 
+        </div>
+
+        <div [routerLink]="['/cholera']" class=" border px-5 shadow" >
+          <div class="beneficiary-icon mx-1 py-5 text-center">
+            <img src="../../../assets/icons/cholera.png" alt="Cholera icon">
+
+          </div>
+            <p class="beneficiary py-4">Cholera</p> 
+        </div>
+
+        <div [routerLink]="['/tuberculosis']" class=" border px-5 shadow" >
+          <div class="beneficiary-icon mx-1 py-5 text-center">
+            <img src="../../../assets/icons/cough.png" alt="Tuberculosis icon">
+
+          </div>
+            <p class="beneficiary py-4">Tuberculosis</p> 
+        </div>
+
+        <div  [routerLink]="['/yellow-fever']" class=" border px-5 shadow" >
+          <div class="beneficiary-icon mx-1 py-5 text-center">
+            <img src="../../../assets/icons/fever.png" alt="Yellow fever icon">
+
+          </div>
+            <p class="beneficiary py-4">Yellow Fever</p> 
+        </div>
+
+        <div  [routerLink]="['/ebola']" class=" border px-5 shadow" >
+          <div class="beneficiary-icon mx-1 py-5 text-center">
+            <img src="../../../assets/icons/ebola.png" alt="Ebola icon">
+
+          </div>
+            <p class="beneficiary py-4">Ebola</p> 
+        </div>
+         
+      </div>
+    </div>
+</div>
+
+
+
+    
+<ng-template #mymodal let-modal class="modal">
+  <div *ngIf="mainModal" class="px-5">
+    <div class=" d-flex justify-content-between p-4">
+      <div class="modal-head">
+        Select The Exact Symptoms
+      </div>
+      <button type="button" class="close btnCont" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">×</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form class="" >
+          <div class="row" >
+            <div class="col-md-4 row py-2" *ngFor="let symptom of symptoms">
+              <input type="checkbox" (click)="checked(symptom.id)" class="col-1 check">
+              <span class="col-11" [ngClass]="{'strikeThrough': symptom.strikeThrough == true}">{{symptom.name}}</span>
+            </div>
+            
+          </div>
+         
+        <div class="" style="margin-top:50px">
+          <p class="text-danger" *ngIf="message !== ''">{{message}}</p>
+          <button class="sendBtn" (click)="submit()" type="button">Submit</button>
+        </div>
+      </form>
+    </div>
+    
+  </div>
+  
+    <div *ngIf="successModal" class="">
+      <div class=" d-flex justify-content-end p-4">
+        <button type="button" class="close btnCont"  id="closebtn" aria-label="Close" (click)="modal.dismiss('Cross click')">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="text-center my-5">
+        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M31.9999 61.5213C48.3041 61.5213 61.5212 48.3042 61.5212 32C61.5212 15.6959 48.3041 2.47877 31.9999 2.47877C15.6958 2.47877 2.4787 15.6959 2.4787 32C2.4787 48.3042 15.6958 61.5213 31.9999 61.5213Z" fill="#7D5C44"/>
+          <path d="M32 64C14.3566 64 0 49.6459 0 32C0 14.3566 14.3566 0 32 0C49.6459 0 64 14.3566 64 32C64 49.6459 49.6459 64 32 64ZM32 4.95738C17.0881 4.95738 4.95738 17.0881 4.95738 32C4.95738 46.9119 17.0881 59.0426 32 59.0426C46.9119 59.0426 59.0426 46.9094 59.0426 32C59.0426 17.0881 46.9119 4.95738 32 4.95738Z" fill="#7D5C44"/>
+          <path d="M28.1334 43.7739C27.4691 43.7739 26.8345 43.5086 26.366 43.0327L17.2196 33.7376C16.2604 32.761 16.2728 31.1945 17.2494 30.2327C18.226 29.276 19.795 29.2859 20.7543 30.2625L28.0615 37.6886L43.1791 21.0392C44.1036 20.0255 45.6703 19.9536 46.679 20.8707C47.6928 21.7904 47.7671 23.3569 46.8475 24.3731L29.9676 42.9632C29.5091 43.4689 28.8646 43.7614 28.183 43.7762C28.1656 43.7739 28.1508 43.7739 28.1334 43.7739Z" fill="white"/>
+          </svg>
+          
+      </div>
+          
+      <div class="col-12 text-center " style="margin-bottom: 80px;">
+        <div class="">
+          <h4 class="sendText my-5">You are most likely to be having <strong>{{sickness | titlecase}}</strong>!</h4>
+          <p class="px-5">Do well to chechout our <strong><a class="text-primary" (click)="goto(sickness)">{{sickness | titlecase}}</a></strong> page for more information about the symptoms and possible treatment</p>
+          <p>Do not forget to see you Doctor as quick as possible</p>
+        </div>
+      </div>
+          
+      <div class="mx-4 col-md-6 offset-md-3" style="margin-bottom:50px">
+        <!-- <button class="sendBtn close" aria-label="Close" (click)="modal.dismiss('Cross click')" >Done</button> -->
+      </div>
+    </div>
+
+
+    <div *ngIf="errorModal" class="">
+      <div class=" d-flex justify-content-end p-4">
+        <button type="button" class="close btnCont" aria-label="Close" (click)="modal.dismiss('Cross click')">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="text-center my-5">
+        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M32 61.5213C48.3041 61.5213 61.5213 48.3042 61.5213 32C61.5213 15.6959 48.3041 2.47877 32 2.47877C15.6959 2.47877 2.47876 15.6959 2.47876 32C2.47876 48.3042 15.6959 61.5213 32 61.5213Z" fill="#E2574C"/>
+          <path d="M32 64C14.3566 64 0 49.6459 0 32C0 14.3566 14.3566 0 32 0C49.6459 0 64 14.3566 64 32C64 49.6459 49.6459 64 32 64ZM32 4.95738C17.0881 4.95738 4.95738 17.0881 4.95738 32C4.95738 46.9119 17.0881 59.0426 32 59.0426C46.9119 59.0426 59.0426 46.9094 59.0426 32C59.0426 17.0881 46.9119 4.95738 32 4.95738Z" fill="#E2574C"/>
+          </svg>          
+          
+      </div>
+          
+      <div class="col-12 text-center " style="margin-bottom: 40px;">
+        <div class="">
+          <h5 class="sendText">{{sickness}}!</h5>
+        </div>
+      </div>
+          
+      <div class="mx-4 col-md-6 offset-md-3" style="margin-bottom:50px">
+        <button class="sendBtn close" aria-label="Close" (click)="modal.dismiss('Cross click')" >Done</button>
+      </div>
+    </div>
+</ng-template>

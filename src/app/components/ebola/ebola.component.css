@@ -1,0 +1,66 @@
+.logo{
+    height: 140px;
+    width:320px;
+    
+}
+
+.malaria{
+    background-color: rgb(227, 227, 227);
+    height: 900px;
+}
+
+.btn-home{
+    border: none;
+    color: white;
+    background-color: green;
+    padding: 12px 30px;
+    border-radius: 10px;
+}
+.btn-home:hover{
+    border: none;
+    color: white;
+    font-weight: 600;
+    background-color: rgb(81, 235, 81);
+    padding: 13px 32px;
+    border-radius: 10px;
+}
+
+.tag{
+    width: 60vh;
+    margin-left: 40px;
+}
+
+.tag-item{
+    border-left: 5px solid green;
+    border-top: 1px solid grey;
+    font-weight: 700;
+    font-size: 18px;
+    border-bottom: 1px solid grey;
+    width: inherit;
+
+}
+
+.border{
+    border: 2px solid rgb(192, 188, 188) !important;
+    border-radius: 7px;
+    height: 100vh;
+}
+.correct{
+    border: none;
+    color: white;
+    margin: 15px 30px;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: rgb(9, 135, 9);
+    padding: 13px 32px;
+    border-radius: 10px;
+}
+
+.symptom-head{
+    color: rgb(241, 156, 30);
+}
+
+.bolder{
+    font-weight: 700;
+}
+
